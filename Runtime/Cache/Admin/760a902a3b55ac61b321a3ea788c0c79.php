@@ -85,73 +85,37 @@
             
 
             
-	<!-- 标题栏 -->
-	<div class="main-title">
-		<h2><?php echo ($meta_title); ?></h2>
-	</div>
-    <div class="main-title">
-        我的余额:<?php echo ($money); ?>
-    </div>
 
-	<div class="cf">
-		<div class="fl">
-            <a class="btn" href="<?php echo U('Product/add');?>">添加新产品</a>
-            <button class="btn ajax-post confirm" url="<?php echo U('Product/changeStatus',array('method'=>'resumeUser'));?>" target-form="ids">上 架</button>
-            <button class="btn ajax-post confirm" url="<?php echo U('Product/changeStatus',array('method'=>'forbidUser'));?>" target-form="ids">下 架</button>
-            <button class="btn ajax-post confirm" url="<?php echo U('Product/changeStatus',array('method'=>'deleteUser'));?>" target-form="ids">删 除</button>
+    <div class="main-title">
+        <h2><?php echo ($meta_title); ?></h2>
+    </div>
+    <form action="<?php echo U();?>" method="post" class="form-horizontal">
+        <div class="form-item">
+            <label class="item-label">产品名称:</label><?php echo ($name); ?>
+        </div>
+        <div class="form-item">
+            <label class="item-label">剩余数量:</label><?php echo ($box_n); ?>箱<?php echo ($pie_n); ?>盒
+        </div>
+        <div class="form-item">
+            <label class="item-label">配送目标</label>
+            <select class="controls" style="width:300px;height:30px;" name="uid">
+                <?php echo ($slt); ?>
+            </select>
+        </div>
+        <div class="form-item">
+            <label class="item-label">数量</label>
+            <div class="controls">
+                <input type="text" size="5" name="box" value="">箱
+                <input type="text" size="5" name="pie" value="">盒
+            </div>
         </div>
 
-
-    </div>
-    <!-- 数据列表 -->
-    <div class="data-table table-striped">
-	<table class="">
-    <thead>
-        <tr>
-		<th class="row-selected row-selected"><input class="check-all" type="checkbox"/></th>
-		<th class="">ID</th>
-		<th class="">名称</th>
-		<th class="">图片</th>
-		<th class="">价格</th>
-        <th class="">盒/箱</th>
-            <th class="">拥有</th>
-		<th class="">状态</th>
-		<th class="">操作</th>
-		</tr>
-    </thead>
-    <tbody>
-		<?php if(!empty($_list)): if(is_array($_list)): $i = 0; $__LIST__ = $_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-            <td><input class="ids" type="checkbox" name="id[]" value="<?php echo ($vo["id"]); ?>" /></td>
-			<td><?php echo ($vo["id"]); ?> </td>
-			<td><?php echo ($vo["name"]); ?></td>
-			<td  class="upload-img-box" ><div class="upload-pre-item"  style="height: 30px"><img src="<?php echo ($vo["img"]); ?>" /></div></td>
-			<td><?php echo ($vo["price"]); ?></td>
-			<td><?php echo ($vo["box"]); ?></td>
-            <td><?php echo ($vo["box_n"]); ?>箱<?php echo ($vo["pie_n"]); ?>盒</td>
-            <td><?php if(($vo["status"]) == "1"): ?>正常<?php else: ?>已下架<?php endif; ?></td>
-			<td><a href="<?php echo U('Product/edit?&id='.$vo['id']);?>">查看</a>
-                <?php if(($vo["status"]) == "1"): ?><a href="<?php echo U('Product/changeStatus?method=forbidUser&id='.$vo['id']);?>" class="confirm ajax-get">下架</a>
-				<?php else: ?>
-				<a href="<?php echo U('Product/changeStatus?method=resumeUser&id='.$vo['id']);?>" class="confirm ajax-get">上架</a><?php endif; ?>
-				<a href="<?php echo U('Product/changeStatus?method=deleteUser&id='.$vo['id']);?>" class="confirm ajax-get">删除</a>
-
-            <?php if(($fid) == "1"): ?><input size="5" type="text" class="<?php echo ($vo['id']); ?>" name="box" value="" />箱
-                <input size="5" type="text" class="<?php echo ($vo['id']); ?>" name="pie" value="" />盒
-                <input type="hidden" class="<?php echo ($vo['id']); ?>" name="id" value="<?php echo ($vo['id']); ?>" />
-                <a href="<?php echo U('Product/buy');?>" class="confirm ajax-post" target-form="<?php echo ($vo['id']); ?>">购买</a><?php endif; ?>
-                <?php if(($level) == "1"): ?><a href="<?php echo U('Product/ship?&id='.$vo['id']);?>">发货申请</a>
-                    <?php else: ?>
-                    <a href="<?php echo U('Product/send?&id='.$vo['id']);?>">代理配货</a><?php endif; ?>
-            </td>
-		</tr><?php endforeach; endif; else: echo "" ;endif; ?>
-		<?php else: ?>
-		<td colspan="9" class="text-center"> aOh! 暂时还没有内容! </td><?php endif; ?>
-	</tbody>
-    </table>
-	</div>
-    <div class="page">
-        <?php echo ($_page); ?>
-    </div>
+        <div class="form-item">
+            <input type="hidden" name="id" value="<?php echo ($id); ?>">
+            <button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+            <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </form>
 
         </div>
         <div class="cont-ft">
@@ -246,32 +210,10 @@
         }();
     </script>
     
-	<script src="/Public/static/thinkbox/jquery.thinkbox.js"></script>
-
-	<script type="text/javascript">
-	//搜索功能
-	$("#search").click(function(){
-		var url = $(this).attr('url');
-        var query  = $('.search-form').find('input').serialize();
-        query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g,'');
-        query = query.replace(/^&/g,'');
-        if( url.indexOf('?')>0 ){
-            url += '&' + query;
-        }else{
-            url += '?' + query;
-        }
-		window.location.href = url;
-	});
-	//回车搜索
-	$(".search-input").keyup(function(e){
-		if(e.keyCode === 13){
-			$("#search").click();
-			return false;
-		}
-	});
-    //导航高亮
-    highlight_subnav('<?php echo U('User/index');?>');
-	</script>
+    <script type="text/javascript">
+        //导航高亮
+        highlight_subnav('<?php echo U('Product/index');?>');
+    </script>
 
 </body>
 </html>

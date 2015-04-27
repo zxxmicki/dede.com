@@ -5,6 +5,9 @@
 	<div class="main-title">
 		<h2>{$meta_title}</h2>
 	</div>
+    <div class="main-title">
+        我的余额:{$money}
+    </div>
 
 	<div class="cf">
 		<div class="fl">
@@ -25,12 +28,9 @@
 		<th class="">ID</th>
 		<th class="">名称</th>
 		<th class="">图片</th>
-		<th class="">价格1</th>
-            <th class="">价格2</th>
-            <th class="">价格3</th>
-            <th class="">价格4</th>
-            <th class="">价格5</th>
-            <th class="">盒/箱</th>
+		<th class="">价格</th>
+        <th class="">盒/箱</th>
+            <th class="">拥有</th>
 		<th class="">状态</th>
 		<th class="">操作</th>
 		</tr>
@@ -43,12 +43,9 @@
 			<td>{$vo.id} </td>
 			<td>{$vo.name}</td>
 			<td  class="upload-img-box" ><div class="upload-pre-item"  style="height: 30px"><img src="{$vo.img}" /></div></td>
-			<td>{$vo.price_1}</td>
-            <td>{$vo.price_2}</td>
-            <td>{$vo.price_3}</td>
-            <td>{$vo.price_4}</td>
-            <td>{$vo.price_5}</td>
+			<td>{$vo.price}</td>
 			<td>{$vo.box}</td>
+            <td>{$vo.box_n}箱{$vo.pie_n}盒</td>
             <td><eq name="vo.status" value="1">正常<else/>已下架</eq></td>
 			<td><a href="{:U('Product/edit?&id='.$vo['id'])}">查看</a>
                 <eq name="vo.status" value="1">
@@ -57,7 +54,19 @@
 				<a href="{:U('Product/changeStatus?method=resumeUser&id='.$vo['id'])}" class="confirm ajax-get">上架</a>
 				</eq>
 				<a href="{:U('Product/changeStatus?method=deleteUser&id='.$vo['id'])}" class="confirm ajax-get">删除</a>
-                </td>
+
+            <eq name="fid" value="1">
+                <input size="5" type="text" class="{$vo['id']}" name="box" value="" />箱
+                <input size="5" type="text" class="{$vo['id']}" name="pie" value="" />盒
+                <input type="hidden" class="{$vo['id']}" name="id" value="{$vo['id']}" />
+                <a href="{:U('Product/buy')}" class="confirm ajax-post" target-form="{$vo['id']}">购买</a>
+            </eq>
+                <eq name="level" value="1">
+                    <a href="{:U('Product/ship?&id='.$vo['id'])}">发货申请</a>
+                    <else/>
+                    <a href="{:U('Product/send?&id='.$vo['id'])}">代理配货</a>
+                </eq>
+            </td>
 		</tr>
 		</volist>
 		<else/>

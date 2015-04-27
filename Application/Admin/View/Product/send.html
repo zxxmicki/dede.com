@@ -1,0 +1,42 @@
+<extend name="Public/base"/>
+
+<block name="body">
+
+    <div class="main-title">
+        <h2>{$meta_title}</h2>
+    </div>
+    <form action="{:U()}" method="post" class="form-horizontal">
+        <div class="form-item">
+            <label class="item-label">产品名称:</label>{$name}
+        </div>
+        <div class="form-item">
+            <label class="item-label">剩余数量:</label>{$box_n}箱{$pie_n}盒
+        </div>
+        <div class="form-item">
+            <label class="item-label">配送目标</label>
+            <select class="controls" style="width:300px;height:30px;" name="uid">
+                {$slt}
+            </select>
+        </div>
+        <div class="form-item">
+            <label class="item-label">数量</label>
+            <div class="controls">
+                <input type="text" size="5" name="box" value="">箱
+                <input type="text" size="5" name="pie" value="">盒
+            </div>
+        </div>
+
+        <div class="form-item">
+            <input type="hidden" name="id" value="{$id}">
+            <button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+            <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </form>
+</block>
+
+<block name="script">
+    <script type="text/javascript">
+        //导航高亮
+        highlight_subnav('{:U('Product/index')}');
+    </script>
+</block>

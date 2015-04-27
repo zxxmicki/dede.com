@@ -85,73 +85,56 @@
             
 
             
-	<!-- 标题栏 -->
-	<div class="main-title">
-		<h2><?php echo ($meta_title); ?></h2>
+	<div class="main-title cf">
+		<h2><?php if(ACTION_NAME == 'addaction'): ?>新增<?php else: ?>编辑<?php endif; ?>行为</h2>
 	</div>
-    <div class="main-title">
-        我的余额:<?php echo ($money); ?>
-    </div>
+	<!-- 表单 -->
+	<form id="form" action="<?php echo U('saveAction');?>" method="post" class="form-horizontal">
+		<div class="form-item cf">
+			<label class="item-label">行为标识<span class="check-tips">（输入行为标识 英文字母）</span></label>
+			<div class="controls">
+				<input type="text" class="text input-large" name="name" value="<?php echo ($data["name"]); ?>">
+			</div>
+		</div>
+		<div class="form-item cf">
+			<label class="item-label">行为名称<span class="check-tips">（输入行为名称）</span></label>
+			<div class="controls">
+				<input type="text" class="text input-large" name="title" value="<?php echo ($data["title"]); ?>">
+			</div>
+		</div>
+		<div class="form-item cf">
+			<label class="item-label">行为类型<span class="check-tips">（选择行为类型）</span></label>
+			<div class="controls">
+				<select name="type">
+					<?php $_result=get_action_type(null,true);if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($key); ?>"><?php echo ($vo); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+				</select>
+			</div>
+		</div>
+		<div class="form-item cf">
+			<label class="item-label">行为描述<span class="check-tips">（输入行为描述）</span></label>
+			<div class="controls">
+				<label class="textarea input-large"><textarea name="remark"><?php echo ($data["remark"]); ?></textarea></label>
+			</div>
+		</div>
+		<div class="form-item cf">
+			<label class="item-label">行为规则<span class="check-tips">（输入行为规则，不写则只记录日志）</span></label>
+			<div class="controls">
+				<label class="textarea input-large"><textarea name="rule"><?php echo ($data["rule"]); ?></textarea></label>
+			</div>
+		</div>
+		<div class="form-item cf">
+			<label class="item-label">日志规则<span class="check-tips">（记录日志备注时按此规则来生成，支持[变量|函数]。目前变量有：user,time,model,record,data）</span></label>
+			<div class="controls">
+				<label class="textarea input-large"><textarea name="log"><?php echo ($data["log"]); ?></textarea></label>
+			</div>
+		</div>
 
-	<div class="cf">
-		<div class="fl">
-            <a class="btn" href="<?php echo U('Product/add');?>">添加新产品</a>
-            <button class="btn ajax-post confirm" url="<?php echo U('Product/changeStatus',array('method'=>'resumeUser'));?>" target-form="ids">上 架</button>
-            <button class="btn ajax-post confirm" url="<?php echo U('Product/changeStatus',array('method'=>'forbidUser'));?>" target-form="ids">下 架</button>
-            <button class="btn ajax-post confirm" url="<?php echo U('Product/changeStatus',array('method'=>'deleteUser'));?>" target-form="ids">删 除</button>
-        </div>
-
-
-    </div>
-    <!-- 数据列表 -->
-    <div class="data-table table-striped">
-	<table class="">
-    <thead>
-        <tr>
-		<th class="row-selected row-selected"><input class="check-all" type="checkbox"/></th>
-		<th class="">ID</th>
-		<th class="">名称</th>
-		<th class="">图片</th>
-		<th class="">价格</th>
-        <th class="">盒/箱</th>
-            <th class="">拥有</th>
-		<th class="">状态</th>
-		<th class="">操作</th>
-		</tr>
-    </thead>
-    <tbody>
-		<?php if(!empty($_list)): if(is_array($_list)): $i = 0; $__LIST__ = $_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-            <td><input class="ids" type="checkbox" name="id[]" value="<?php echo ($vo["id"]); ?>" /></td>
-			<td><?php echo ($vo["id"]); ?> </td>
-			<td><?php echo ($vo["name"]); ?></td>
-			<td  class="upload-img-box" ><div class="upload-pre-item"  style="height: 30px"><img src="<?php echo ($vo["img"]); ?>" /></div></td>
-			<td><?php echo ($vo["price"]); ?></td>
-			<td><?php echo ($vo["box"]); ?></td>
-            <td><?php echo ($vo["box_n"]); ?>箱<?php echo ($vo["pie_n"]); ?>盒</td>
-            <td><?php if(($vo["status"]) == "1"): ?>正常<?php else: ?>已下架<?php endif; ?></td>
-			<td><a href="<?php echo U('Product/edit?&id='.$vo['id']);?>">查看</a>
-                <?php if(($vo["status"]) == "1"): ?><a href="<?php echo U('Product/changeStatus?method=forbidUser&id='.$vo['id']);?>" class="confirm ajax-get">下架</a>
-				<?php else: ?>
-				<a href="<?php echo U('Product/changeStatus?method=resumeUser&id='.$vo['id']);?>" class="confirm ajax-get">上架</a><?php endif; ?>
-				<a href="<?php echo U('Product/changeStatus?method=deleteUser&id='.$vo['id']);?>" class="confirm ajax-get">删除</a>
-
-            <?php if(($fid) == "1"): ?><input size="5" type="text" class="<?php echo ($vo['id']); ?>" name="box" value="" />箱
-                <input size="5" type="text" class="<?php echo ($vo['id']); ?>" name="pie" value="" />盒
-                <input type="hidden" class="<?php echo ($vo['id']); ?>" name="id" value="<?php echo ($vo['id']); ?>" />
-                <a href="<?php echo U('Product/buy');?>" class="confirm ajax-post" target-form="<?php echo ($vo['id']); ?>">购买</a><?php endif; ?>
-                <?php if(($level) == "1"): ?><a href="<?php echo U('Product/ship?&id='.$vo['id']);?>">发货申请</a>
-                    <?php else: ?>
-                    <a href="<?php echo U('Product/send?&id='.$vo['id']);?>">代理配货</a><?php endif; ?>
-            </td>
-		</tr><?php endforeach; endif; else: echo "" ;endif; ?>
-		<?php else: ?>
-		<td colspan="9" class="text-center"> aOh! 暂时还没有内容! </td><?php endif; ?>
-	</tbody>
-    </table>
-	</div>
-    <div class="page">
-        <?php echo ($_page); ?>
-    </div>
+		<div class="form-item">
+			<input type="hidden" name="id" value="<?php echo ($data["id"]); ?>"/>
+			<button type="submit" class="btn submit-btn ajax-post" target-form="form-horizontal">确 定</button>
+			<button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+		</div>
+	</form>
 
         </div>
         <div class="cont-ft">
@@ -246,32 +229,12 @@
         }();
     </script>
     
-	<script src="/Public/static/thinkbox/jquery.thinkbox.js"></script>
-
-	<script type="text/javascript">
-	//搜索功能
-	$("#search").click(function(){
-		var url = $(this).attr('url');
-        var query  = $('.search-form').find('input').serialize();
-        query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g,'');
-        query = query.replace(/^&/g,'');
-        if( url.indexOf('?')>0 ){
-            url += '&' + query;
-        }else{
-            url += '?' + query;
-        }
-		window.location.href = url;
-	});
-	//回车搜索
-	$(".search-input").keyup(function(e){
-		if(e.keyCode === 13){
-			$("#search").click();
-			return false;
-		}
-	});
+<script type="text/javascript" src="/Public/static/uploadify/jquery.uploadify.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+	Think.setValue('type',<?php echo ((isset($type) && ($type !== ""))?($type):1); ?>);
     //导航高亮
-    highlight_subnav('<?php echo U('User/index');?>');
-	</script>
+    highlight_subnav('<?php echo U('User/action');?>');
+</script>
 
 </body>
 </html>

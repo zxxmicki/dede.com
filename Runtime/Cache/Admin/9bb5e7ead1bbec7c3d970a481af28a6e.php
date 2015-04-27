@@ -85,73 +85,61 @@
             
 
             
-	<!-- 标题栏 -->
 	<div class="main-title">
-		<h2><?php echo ($meta_title); ?></h2>
+		<h2>配置管理 [ <?php if(isset($_GET['group'])): ?><a href="<?php echo U('index');?>">全部</a><?php else: ?><strong>全部</strong><?php endif; ?>&nbsp;<?php if(is_array($group)): foreach($group as $key=>$vo): if(($group_id) != $key): ?><a href="<?php echo U('index?group='.$key);?>"><?php echo ($vo); ?></a><?php else: ?><strong><?php echo ($vo); ?></strong><?php endif; ?>&nbsp;<?php endforeach; endif; ?> ]</h2>
 	</div>
-    <div class="main-title">
-        我的余额:<?php echo ($money); ?>
-    </div>
 
 	<div class="cf">
-		<div class="fl">
-            <a class="btn" href="<?php echo U('Product/add');?>">添加新产品</a>
-            <button class="btn ajax-post confirm" url="<?php echo U('Product/changeStatus',array('method'=>'resumeUser'));?>" target-form="ids">上 架</button>
-            <button class="btn ajax-post confirm" url="<?php echo U('Product/changeStatus',array('method'=>'forbidUser'));?>" target-form="ids">下 架</button>
-            <button class="btn ajax-post confirm" url="<?php echo U('Product/changeStatus',array('method'=>'deleteUser'));?>" target-form="ids">删 除</button>
-        </div>
-
-
-    </div>
-    <!-- 数据列表 -->
-    <div class="data-table table-striped">
-	<table class="">
-    <thead>
-        <tr>
-		<th class="row-selected row-selected"><input class="check-all" type="checkbox"/></th>
-		<th class="">ID</th>
-		<th class="">名称</th>
-		<th class="">图片</th>
-		<th class="">价格</th>
-        <th class="">盒/箱</th>
-            <th class="">拥有</th>
-		<th class="">状态</th>
-		<th class="">操作</th>
-		</tr>
-    </thead>
-    <tbody>
-		<?php if(!empty($_list)): if(is_array($_list)): $i = 0; $__LIST__ = $_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-            <td><input class="ids" type="checkbox" name="id[]" value="<?php echo ($vo["id"]); ?>" /></td>
-			<td><?php echo ($vo["id"]); ?> </td>
-			<td><?php echo ($vo["name"]); ?></td>
-			<td  class="upload-img-box" ><div class="upload-pre-item"  style="height: 30px"><img src="<?php echo ($vo["img"]); ?>" /></div></td>
-			<td><?php echo ($vo["price"]); ?></td>
-			<td><?php echo ($vo["box"]); ?></td>
-            <td><?php echo ($vo["box_n"]); ?>箱<?php echo ($vo["pie_n"]); ?>盒</td>
-            <td><?php if(($vo["status"]) == "1"): ?>正常<?php else: ?>已下架<?php endif; ?></td>
-			<td><a href="<?php echo U('Product/edit?&id='.$vo['id']);?>">查看</a>
-                <?php if(($vo["status"]) == "1"): ?><a href="<?php echo U('Product/changeStatus?method=forbidUser&id='.$vo['id']);?>" class="confirm ajax-get">下架</a>
-				<?php else: ?>
-				<a href="<?php echo U('Product/changeStatus?method=resumeUser&id='.$vo['id']);?>" class="confirm ajax-get">上架</a><?php endif; ?>
-				<a href="<?php echo U('Product/changeStatus?method=deleteUser&id='.$vo['id']);?>" class="confirm ajax-get">删除</a>
-
-            <?php if(($fid) == "1"): ?><input size="5" type="text" class="<?php echo ($vo['id']); ?>" name="box" value="" />箱
-                <input size="5" type="text" class="<?php echo ($vo['id']); ?>" name="pie" value="" />盒
-                <input type="hidden" class="<?php echo ($vo['id']); ?>" name="id" value="<?php echo ($vo['id']); ?>" />
-                <a href="<?php echo U('Product/buy');?>" class="confirm ajax-post" target-form="<?php echo ($vo['id']); ?>">购买</a><?php endif; ?>
-                <?php if(($level) == "1"): ?><a href="<?php echo U('Product/ship?&id='.$vo['id']);?>">发货申请</a>
-                    <?php else: ?>
-                    <a href="<?php echo U('Product/send?&id='.$vo['id']);?>">代理配货</a><?php endif; ?>
-            </td>
-		</tr><?php endforeach; endif; else: echo "" ;endif; ?>
-		<?php else: ?>
-		<td colspan="9" class="text-center"> aOh! 暂时还没有内容! </td><?php endif; ?>
-	</tbody>
-    </table>
+		<a class="btn" href="<?php echo U('add');?>">新 增</a>
+		<a class="btn" href="javascript:;">删 除</a>
+		<button class="btn list_sort" url="<?php echo U('sort?group='.I('group'),'','');?>">排序</button>
+        
+		<!-- 高级搜索 -->
+		<div class="search-form fr cf">
+			<div class="sleft">
+				<input type="text" name="name" class="search-input" value="<?php echo I('name');?>" placeholder="请输入配置名称">
+				<a class="sch-btn" href="javascript:;" id="search" url="<?php echo U('config/index');?>"><i class="btn-search"></i></a>
+			</div>
+		</div>
 	</div>
-    <div class="page">
-        <?php echo ($_page); ?>
-    </div>
+
+	<div class="data-table table-striped">
+		<table>
+			<thead>
+				<tr>
+					<th class="row-selected">
+						<input class="checkbox check-all" type="checkbox">
+					</th>
+					<th>ID</th>
+					<th>名称</th>
+					<th>标题</th>
+					<th>分组</th>
+					<th>类型</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php if(!empty($list)): if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$config): $mod = ($i % 2 );++$i;?><tr>
+						<td><input class="ids row-selected" type="checkbox" name="id[]" value="<?php echo ($config["id"]); ?>"></td>
+						<td><?php echo ($config["id"]); ?></td>
+						<td><a href="<?php echo U('edit?id='.$config['id']);?>"><?php echo ($config["name"]); ?></a></td>
+						<td><?php echo ($config["title"]); ?></td>
+						<td><?php echo (get_config_group($config["group"])); ?></td>
+						<td><?php echo (get_config_type($config["type"])); ?></td>
+						<td>
+							<a title="编辑" href="<?php echo U('edit?id='.$config['id']);?>">编辑</a>
+							<a class="confirm ajax-get" title="删除" href="<?php echo U('del?id='.$config['id']);?>">删除</a>
+						</td>
+					</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+				<?php else: ?>
+				<td colspan="6" class="text-center"> aOh! 暂时还没有内容! </td><?php endif; ?>
+			</tbody>
+		</table>
+		<!-- 分页 -->
+	    <div class="page">
+	        <?php echo ($_page); ?>
+	    </div>
+	</div>
 
         </div>
         <div class="cont-ft">
@@ -246,9 +234,8 @@
         }();
     </script>
     
-	<script src="/Public/static/thinkbox/jquery.thinkbox.js"></script>
-
-	<script type="text/javascript">
+<script type="text/javascript">
+$(function(){
 	//搜索功能
 	$("#search").click(function(){
 		var url = $(this).attr('url');
@@ -269,9 +256,25 @@
 			return false;
 		}
 	});
-    //导航高亮
-    highlight_subnav('<?php echo U('User/index');?>');
-	</script>
+	//点击排序
+	$('.list_sort').click(function(){
+		var url = $(this).attr('url');
+		var ids = $('.ids:checked');
+		var param = '';
+		if(ids.length > 0){
+			var str = new Array();
+			ids.each(function(){
+				str.push($(this).val());
+			});
+			param = str.join(',');
+		}
+
+		if(url != undefined && url != ''){
+			window.location.href = url + '/ids/' + param;
+		}
+	});
+});
+</script>
 
 </body>
 </html>

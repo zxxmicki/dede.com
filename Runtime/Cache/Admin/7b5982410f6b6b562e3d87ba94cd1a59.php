@@ -85,73 +85,57 @@
             
 
             
-	<!-- 标题栏 -->
-	<div class="main-title">
-		<h2><?php echo ($meta_title); ?></h2>
+	<div class="tab-wrap">
+		<ul class="tab-nav nav">
+			<li class="current"><a href="javascript:;">访问授权</a></li>
+            <li><a href="<?php echo U('AuthManager/category',array('group_name'=>I('group_name') ,'group_id'=> I('group_id')));?>">分类授权</a></li>
+			<li><a href="<?php echo U('AuthManager/user',array('group_name'=>I('group_name') ,'group_id'=> I('group_id')));?>">成员授权</a></li>
+			<li class="fr">
+				<select name="group">
+					<?php if(is_array($auth_group)): $i = 0; $__LIST__ = $auth_group;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo U('AuthManager/access',array('group_id'=>$vo['id'],'group_name'=>$vo['title']));?>" <?php if(($vo['id']) == $this_group['id']): ?>selected<?php endif; ?> ><?php echo ($vo["title"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+				</select>
+			</li>
+		</ul>
+		<div class="tab-content">
+			<!-- 访问授权 -->
+			<div class="tab-pane in">
+				<form action="<?php echo U('AuthManager/writeGroup');?>" enctype="application/x-www-form-urlencoded" method="POST" class="form-horizontal auth-form">
+					<?php if(is_array($node_list)): $i = 0; $__LIST__ = $node_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$node): $mod = ($i % 2 );++$i;?><dl class="checkmod">
+							<dt class="hd">
+								<label class="checkbox"><input class="auth_rules rules_all" type="checkbox" name="rules[]" value="<?php echo $main_rules[$node['url']] ?>"><?php echo ($node["title"]); ?>管理</label>
+							</dt>
+							<dd class="bd">
+								<?php if(isset($node['child'])): if(is_array($node['child'])): $i = 0; $__LIST__ = $node['child'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$child): $mod = ($i % 2 );++$i;?><div class="rule_check">
+                                        <div>
+                                            <label class="checkbox" <?php if(!empty($child['tip'])): ?>title='<?php echo ($child["tip"]); ?>'<?php endif; ?>>
+                                           <input class="auth_rules rules_row" type="checkbox" name="rules[]" value="<?php echo $auth_rules[$child['url']] ?>"/><?php echo ($child["title"]); ?>
+                                            </label>
+                                        </div>
+                                       <?php if(!empty($child['operator'])): ?><span class="divsion">&nbsp;</span>
+                                           <span class="child_row">
+                                               <?php if(is_array($child['operator'])): $i = 0; $__LIST__ = $child['operator'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$op): $mod = ($i % 2 );++$i;?><label class="checkbox" <?php if(!empty($op['tip'])): ?>title='<?php echo ($op["tip"]); ?>'<?php endif; ?>>
+                                                       <input class="auth_rules" type="checkbox" name="rules[]"
+                                                       value="<?php echo $auth_rules[$op['url']] ?>"/><?php echo ($op["title"]); ?>
+                                                   </label><?php endforeach; endif; else: echo "" ;endif; ?>
+                                           </span><?php endif; ?>
+				                    </div><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+							</dd>
+						</dl><?php endforeach; endif; else: echo "" ;endif; ?>
+
+			        <input type="hidden" name="id" value="<?php echo ($this_group["id"]); ?>" />
+                    <button type="submit" class="btn submit-btn ajax-post" target-form="auth-form">确 定</button>
+                    <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+			    </form>
+			</div>
+
+			<!-- 成员授权 -->
+			<div class="tab-pane"></div>
+
+			<!-- 分类 -->
+			<div class="tab-pane"></div>
+		</div>
 	</div>
-    <div class="main-title">
-        我的余额:<?php echo ($money); ?>
-    </div>
 
-	<div class="cf">
-		<div class="fl">
-            <a class="btn" href="<?php echo U('Product/add');?>">添加新产品</a>
-            <button class="btn ajax-post confirm" url="<?php echo U('Product/changeStatus',array('method'=>'resumeUser'));?>" target-form="ids">上 架</button>
-            <button class="btn ajax-post confirm" url="<?php echo U('Product/changeStatus',array('method'=>'forbidUser'));?>" target-form="ids">下 架</button>
-            <button class="btn ajax-post confirm" url="<?php echo U('Product/changeStatus',array('method'=>'deleteUser'));?>" target-form="ids">删 除</button>
-        </div>
-
-
-    </div>
-    <!-- 数据列表 -->
-    <div class="data-table table-striped">
-	<table class="">
-    <thead>
-        <tr>
-		<th class="row-selected row-selected"><input class="check-all" type="checkbox"/></th>
-		<th class="">ID</th>
-		<th class="">名称</th>
-		<th class="">图片</th>
-		<th class="">价格</th>
-        <th class="">盒/箱</th>
-            <th class="">拥有</th>
-		<th class="">状态</th>
-		<th class="">操作</th>
-		</tr>
-    </thead>
-    <tbody>
-		<?php if(!empty($_list)): if(is_array($_list)): $i = 0; $__LIST__ = $_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-            <td><input class="ids" type="checkbox" name="id[]" value="<?php echo ($vo["id"]); ?>" /></td>
-			<td><?php echo ($vo["id"]); ?> </td>
-			<td><?php echo ($vo["name"]); ?></td>
-			<td  class="upload-img-box" ><div class="upload-pre-item"  style="height: 30px"><img src="<?php echo ($vo["img"]); ?>" /></div></td>
-			<td><?php echo ($vo["price"]); ?></td>
-			<td><?php echo ($vo["box"]); ?></td>
-            <td><?php echo ($vo["box_n"]); ?>箱<?php echo ($vo["pie_n"]); ?>盒</td>
-            <td><?php if(($vo["status"]) == "1"): ?>正常<?php else: ?>已下架<?php endif; ?></td>
-			<td><a href="<?php echo U('Product/edit?&id='.$vo['id']);?>">查看</a>
-                <?php if(($vo["status"]) == "1"): ?><a href="<?php echo U('Product/changeStatus?method=forbidUser&id='.$vo['id']);?>" class="confirm ajax-get">下架</a>
-				<?php else: ?>
-				<a href="<?php echo U('Product/changeStatus?method=resumeUser&id='.$vo['id']);?>" class="confirm ajax-get">上架</a><?php endif; ?>
-				<a href="<?php echo U('Product/changeStatus?method=deleteUser&id='.$vo['id']);?>" class="confirm ajax-get">删除</a>
-
-            <?php if(($fid) == "1"): ?><input size="5" type="text" class="<?php echo ($vo['id']); ?>" name="box" value="" />箱
-                <input size="5" type="text" class="<?php echo ($vo['id']); ?>" name="pie" value="" />盒
-                <input type="hidden" class="<?php echo ($vo['id']); ?>" name="id" value="<?php echo ($vo['id']); ?>" />
-                <a href="<?php echo U('Product/buy');?>" class="confirm ajax-post" target-form="<?php echo ($vo['id']); ?>">购买</a><?php endif; ?>
-                <?php if(($level) == "1"): ?><a href="<?php echo U('Product/ship?&id='.$vo['id']);?>">发货申请</a>
-                    <?php else: ?>
-                    <a href="<?php echo U('Product/send?&id='.$vo['id']);?>">代理配货</a><?php endif; ?>
-            </td>
-		</tr><?php endforeach; endif; else: echo "" ;endif; ?>
-		<?php else: ?>
-		<td colspan="9" class="text-center"> aOh! 暂时还没有内容! </td><?php endif; ?>
-	</tbody>
-    </table>
-	</div>
-    <div class="page">
-        <?php echo ($_page); ?>
-    </div>
 
         </div>
         <div class="cont-ft">
@@ -246,32 +230,58 @@
         }();
     </script>
     
-	<script src="/Public/static/thinkbox/jquery.thinkbox.js"></script>
+<script type="text/javascript" src="/Public/static/qtip/jquery.qtip.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/Public/static/qtip/jquery.qtip.min.css" media="all">
+<script type="text/javascript" charset="utf-8">
+    +function($){
+        var rules = [<?php echo ($this_group["rules"]); ?>];
+        $('.auth_rules').each(function(){
+            if( $.inArray( parseInt(this.value,10),rules )>-1 ){
+                $(this).prop('checked',true);
+            }
+            if(this.value==''){
+                $(this).closest('span').remove();
+            }
+        });
 
-	<script type="text/javascript">
-	//搜索功能
-	$("#search").click(function(){
-		var url = $(this).attr('url');
-        var query  = $('.search-form').find('input').serialize();
-        query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g,'');
-        query = query.replace(/^&/g,'');
-        if( url.indexOf('?')>0 ){
-            url += '&' + query;
-        }else{
-            url += '?' + query;
-        }
-		window.location.href = url;
-	});
-	//回车搜索
-	$(".search-input").keyup(function(e){
-		if(e.keyCode === 13){
-			$("#search").click();
-			return false;
-		}
-	});
-    //导航高亮
-    highlight_subnav('<?php echo U('User/index');?>');
-	</script>
+        //全选节点
+        $('.rules_all').on('change',function(){
+            $(this).closest('dl').find('dd').find('input').prop('checked',this.checked);
+        });
+        $('.rules_row').on('change',function(){
+            $(this).closest('.rule_check').find('.child_row').find('input').prop('checked',this.checked);
+        });
+
+        $('.checkbox').each(function(){
+            $(this).qtip({
+                content: {
+                    text: $(this).attr('title'),
+                    title: $(this).text()
+                },
+                position: {
+                    my: 'bottom center',
+                    at: 'top center',
+                    target: $(this)
+                },
+                style: {
+                    classes: 'qtip-dark',
+                    tip: {
+                        corner: true,
+                        mimic: false,
+                        width: 10,
+                        height: 10
+                    }
+                }
+            });
+        });
+
+        $('select[name=group]').change(function(){
+			location.href = this.value;
+        });
+        //导航高亮
+        highlight_subnav('<?php echo U('AuthManager/index');?>');
+    }(jQuery);
+</script>
 
 </body>
 </html>

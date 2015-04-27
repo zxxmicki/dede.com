@@ -26,10 +26,18 @@ class ProductController extends AdminController {
         $list   = $this->lists('Product',$map);
 
         $this->mynum = M('Product')->where($map)->count();
-
+		$level=M(UcenterMember)->where('id='.UID)->getField('level');
+        $this->fid=M(UcenterMember)->where('id='.UID)->getField('fid');
+        $this->money=M(UcenterMember)->where('id='.UID)->getField('money');
+        $this->level=M(UcenterMember)->where('id='.UID)->getField('level');
+		foreach($list as $key => $value){
+            $list[$key]['num']=M(ProductToUser)->where('product_id='.$list[$key]['id'].' and user_id='.UID)->getField('qty');
+            $list[$key]['box_n']=floor($list[$key]['num']/$list[$key]['box']);
+            $list[$key]['pie_n']=$list[$key]['num']%$list[$key]['box'];
+			$list[$key]['price']=$list[$key]['price_'.$level];
+		}
         $this->assign('_list', $list);
         $this->meta_title = '产品信息';
-
 
         $this->display();
     }
@@ -187,6 +195,100 @@ class ProductController extends AdminController {
                 break;
             default:
                 $this->error('参数非法');
+        }
+    }
+
+    public function buy(){
+        $id = I('id',0);
+        $box = I('box');
+        $pie = I('pie');
+        $p = M('Product')->where('id='.$id)->find();
+        $u = M('UcenterMember')->where('id='.UID)->find();
+        $num = $box*$p['box']+$pie;
+        if($num<=0)$this->error('请输入正确的购买数量');
+        if(!is_int($num))$this->error('请输入正确的购买数量');
+        $money_totle = $num*$p['price_'.$u['level']];
+        if($money_totle>$u['money'])$this->error('余额不足,请充值');
+        $p_u=M('ProductToUser')->where('product_id='.$id.' and user_id='.UID)->getField('id');
+        if($p_u){
+            M('ProductToUser')->where('id='.$p_u)->setInc('qty',$num);
+        }else{
+            M('ProductToUser')->add(array('product_id'=>$id,'user_id'=>UID,'qty'=>$num));
+        }
+        M('UcenterMember')->where('id='.UID)->setDec('money',$money_totle);
+        $this->success('购买成功,金额:'.$money_totle);
+
+    }
+
+    public function send(){
+        $id = I('id');
+        $this->name =  M('Product')->where('id='.$id)->getField('name');
+        $this->box =  M('Product')->where('id='.$id)->getField('box');
+        $own_n = M('ProductToUser')->where('product_id='.$id.' and user_id='.UID)->getField('qty');
+        if(IS_POST){
+            $uid = I('uid');
+            $box = I('box');
+            $pie = I('pie');
+            $num = $box*$this->box+$pie;
+            if($num<=0)$this->error('请输入要配送的数量');
+            if(!is_int($num))$this->error('请输入正确的配送数量');
+            if($own_n < $num)$this->error('您的存货不足,请先购买');
+            $p_u=M('ProductToUser')->where('product_id='.$id.' and user_id='.$uid)->getField('id');
+            if($p_u){
+                M('ProductToUser')->where('id='.$p_u)->setInc('qty',$num);
+            }else{
+                M('ProductToUser')->add(array('product_id'=>$id,'user_id'=>$uid,'qty'=>$num));
+            }
+            M('ProductToUser')->where('product_id='.$id.' and user_id='.UID)->setDec('qty',$num);
+            $this->success('配货成功');
+        } else {
+            $this->id=$id;
+            $this->box_n=floor($own_n/$this->box);
+            $this->pie_n=$own_n%$this->box;
+            $this->slt = '';
+            $list = M('UcenterMember')->where('fid='.UID.' and status>0')->select();
+            foreach($list as $key => $value){
+                $this->slt .= '<option value="'.$list[$key]['id'].'">'.$list[$key]['username'].'</option>';
+            }
+            $this->meta_title = '代理配货';
+
+            $this->display();
+        }
+    }
+
+    public function ship(){
+        $id = I('id');
+        $this->name =  M('Product')->where('id='.$id)->getField('name');
+        $this->box =  M('Product')->where('id='.$id)->getField('box');
+        $own_n = M('ProductToUser')->where('product_id='.$id.' and user_id='.UID)->getField('qty');
+        if(IS_POST){
+            $uid = I('uid');
+            $box = I('box');
+            $pie = I('pie');
+            $num = $box*$this->box+$pie;
+            if($num<=0)$this->error('请输入要配送的数量');
+            if(!is_int($num))$this->error('请输入正确的配送数量');
+            if($own_n < $num)$this->error('您的存货不足,请先购买');
+            $p_u=M('ProductToUser')->where('product_id='.$id.' and user_id='.$uid)->getField('id');
+            if($p_u){
+                M('ProductToUser')->where('id='.$p_u)->setInc('qty',$num);
+            }else{
+                M('ProductToUser')->add(array('product_id'=>$id,'user_id'=>$uid,'qty'=>$num));
+            }
+            M('ProductToUser')->where('product_id='.$id.' and user_id='.UID)->setDec('qty',$num);
+            $this->success('配货成功');
+        } else {
+            $this->id=$id;
+            $this->box_n=floor($own_n/$this->box);
+            $this->pie_n=$own_n%$this->box;
+            $this->slt = '';
+            $list = M('UcenterMember')->where('fid='.UID.' and status>0')->select();
+            foreach($list as $key => $value){
+                $this->slt .= '<option value="'.$list[$key]['id'].'">'.$list[$key]['username'].'</option>';
+            }
+            $this->meta_title = '发货申请';
+
+            $this->display();
         }
     }
 
