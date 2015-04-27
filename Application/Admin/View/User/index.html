@@ -1,0 +1,112 @@
+<extend name="Public/base" />
+
+<block name="body">
+	<!-- 标题栏 -->
+	<div class="main-title">
+		<h2>用户列表</h2>
+	</div>
+    <div class="main-title">
+    我的团队: <font size="3" color="red">{$mynum}</font>人  团队下级代理: <font size="3" color="red">{$totlenum}</font>人<br/>
+    直接上级: {$top}
+    </div>
+	<div class="cf">
+		<div class="fl">
+            <a class="btn" href="{:U('User/add')}">申请下级代理</a>
+            <button class="btn ajax-post confirm" url="{:U('User/changeStatus',array('method'=>'resumeUser'))}" target-form="ids">启 用</button>
+            <button class="btn ajax-post confirm" url="{:U('User/changeStatus',array('method'=>'forbidUser'))}" target-form="ids">禁 用</button>
+            <button class="btn ajax-post confirm" url="{:U('User/changeStatus',array('method'=>'deleteUser'))}" target-form="ids">删 除</button>
+        </div>
+
+        <!-- 高级搜索 -->
+		<div class="search-form fr cf">
+			<div class="sleft">
+				<input type="text" name="nickname" class="search-input" value="{:I('nickname')}" placeholder="请输入用户姓名或者手机号">
+				<a class="sch-btn" href="javascript:;" id="search" url="{:U('index')}"><i class="btn-search"></i></a>
+			</div>
+		</div>
+    </div>
+    <!-- 数据列表 -->
+    <div class="data-table table-striped">
+	<table class="">
+    <thead>
+        <tr>
+		<th class="row-selected row-selected"><input class="check-all" type="checkbox"/></th>
+		<th class="">姓名</th>
+		<th class="">手机号</th>
+		<th class="">等级</th>
+		<th class="">代理数(有效/总数)</th>
+		<th class="">授权到期时间</th>
+		<th class="">最后登录时间</th>
+		<th class="">状态</th>
+        <th class="">信用</th>
+		<th class="">操作</th>
+		</tr>
+    </thead>
+    <tbody>
+		<notempty name="_list">
+		<volist name="_list" id="vo">
+		<tr>
+            <td><input class="ids" type="checkbox" name="id[]" value="{$vo.id}" /></td>
+			<td>{$vo.username} </td>
+			<td>{$vo.mobile}</td>
+			<td>{$vo.level_text}</td>
+			<td>{$vo.ownr}/{$vo.own} {$vo.top}</td>
+            <td><span>{$vo.end_time|time_format}</span></td>
+			<td><span>{$vo.last_login_time|time_format}</span></td>
+			<td>{$vo.status_text}</td>
+            <td>{$vo.money}</td>
+			<td><a href="{:U('User/edit?&id='.$vo['id'])}">查看</a>
+                <eq name="vo.status" value="1">
+				<a href="{:U('User/changeStatus?method=forbidUser&id='.$vo['id'])}" class="confirm ajax-get">撤销</a>
+				<else/>
+				<a href="{:U('User/changeStatus?method=resumeUser&id='.$vo['id'])}" class="confirm ajax-get">核审</a>
+				</eq>
+				<a href="{:U('User/changeStatus?method=deleteUser&id='.$vo['id'])}" class="confirm ajax-get">删除</a>
+                <eq name="vo.fid" value="1">
+                    <input size="5" type="text" class="{$vo['id']}" name="money" value="" />
+                    <input type="hidden" class="{$vo['id']}" name="id" value="{$vo['id']}" />
+                    <a href="{:U('User/changeStatus',array('method'=>'addm','id'=>$vo['id']))}" class="confirm ajax-post" target-form="{$vo['id']}">加款</a>
+                    <a href="{:U('User/changeStatus',array('method'=>'subm','id'=>$vo['id']))}" class="confirm ajax-post" target-form="{$vo['id']}">减款</a>
+                </eq>
+                </td>
+		</tr>
+		</volist>
+		<else/>
+		<td colspan="9" class="text-center"> aOh! 暂时还没有内容! </td>
+		</notempty>
+	</tbody>
+    </table>
+	</div>
+    <div class="page">
+        {$_page}
+    </div>
+</block>
+
+<block name="script">
+	<script src="__STATIC__/thinkbox/jquery.thinkbox.js"></script>
+
+	<script type="text/javascript">
+	//搜索功能
+	$("#search").click(function(){
+		var url = $(this).attr('url');
+        var query  = $('.search-form').find('input').serialize();
+        query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g,'');
+        query = query.replace(/^&/g,'');
+        if( url.indexOf('?')>0 ){
+            url += '&' + query;
+        }else{
+            url += '?' + query;
+        }
+		window.location.href = url;
+	});
+	//回车搜索
+	$(".search-input").keyup(function(e){
+		if(e.keyCode === 13){
+			$("#search").click();
+			return false;
+		}
+	});
+    //导航高亮
+    highlight_subnav('{:U('User/index')}');
+	</script>
+</block>

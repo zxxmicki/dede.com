@@ -1,0 +1,826 @@
+@charset "UTF-8";
+/*!
+ * personal css;
+ * versions 1.0  2015-1-1
+ * author :wwl
+ */
+ 
+ /*   Dictionary
+--------------------------------------
+1. Reset and gloable layout
+2. Header
+3. Content pages
+4. SideBar
+5. Footer
+----------------------------------------*/
+
+ /* 1.1 Reset
+ ----------Reset(初始化)------------------------------------*/
+ /**清除内外边距**/
+body, h1, h2, h3, h4, h5, h6, hr, p,
+blockquote, /* structural 
+
+elements结构元素*/
+dl, dt, dd, ul, ol, li, /* list elements列表元素*/
+pre, /* text formatting elements文本格式元素*/
+form, fieldset, legend, button, input,textarea, /* form elements表单元素*/
+th, 
+
+td, /* table elements表格元素*/
+img/* img elements图片元素*/
+{
+border:none;
+margin: 0;
+padding: 0;
+}
+/**div块级元素**/
+div{margin: 0;
+padding: 0;}
+/**设置默认字体**/
+body,button, input, select, 
+textarea {
+font-family:'微软雅黑',Microsoft YaHei,\5FAE\8F6F\96C5\9ED1;
+font-size:14px;
+ }
+button:focus, input:focus, select:focus, 
+textarea:focus{outline:none}
+/*标题文字重设*/
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+/*将字体扶正*/
+i,em{font-style:normal;}
+
+/**
+
+重置列表元素**/
+ul, ol { list-style: none; }
+/**重置超链接元素**/
+a {text-decoration: none; color:#282417;}
+a:hover { text-decoration: none;color:#282417; }
+/**重置图片元素**/
+img,a img{ border:none;}
+/**重
+
+置表格元素**/
+table{ border-collapse: collapse;border-spacing: 0; }
+.author{WebDeveloper:wwl}
+body{
+	background:#fffde5;
+}
+
+/* 1.2 gloable layout
+----------------------布局-----------------*/
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+}
+.container{ 
+	width:1000px;
+	min-width:1000px;
+	clear:both;
+	overflow:hidden;
+	margin:0 auto;
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.container-fluid:after, .row:after{
+	clear:both;
+	display: table;
+}
+.col-xs-1, 
+.col-xs-2, 
+.col-xs-3, 
+.col-xs-4, 
+.col-xs-5, 
+.col-xs-6, 
+.col-xs-7, 
+.col-xs-8, 
+.col-xs-9, 
+.col-xs-10, 
+.col-xs-11, 
+.col-xs-12 {
+  float: left;
+}
+.col-xs-12 {
+  width: 100%;
+}
+.col-xs-11 {
+  
+
+width: 91.66666667%;
+}
+.col-xs-10 {
+  width: 83.33333333%;
+}
+.col-xs-9 {
+  width: 75%;
+}
+.col-xs-8 {
+  width: 66.66666667%;
+}
+.col-xs-7 {
+  width: 58.33333333%;
+}
+.col-xs-6 {
+  width: 50%;
+}
+.col-xs-5 {
+  
+
+width: 41.66666667%;
+}
+.col-xs-4 {
+  width: 33.33333333%;
+}
+.col-xs-3 {
+  width: 25%;
+}
+.col-xs-2 {
+  width: 16.66666667%;
+}
+.col-xs-1 {
+  width: 8.33333333%;
+}
+.pull-left{
+	float:left !important;
+}
+.pull-
+
+right{
+	float:right !important;
+}
+/*
+---偏移--------*/
+.col-xs-offset-12 {
+  margin-left: 100%;
+}
+.col-xs-offset-11 {
+  margin-left: 91.66666667%;
+}
+.col-xs-offset-10 {
+  margin-left: 83.33333333%;
+}
+.col-xs-offset-9 {
+  margin-left: 75%;
+}
+.col-xs-offset-8 {
+  margin-left: 66.66666667%;
+}
+.col-xs-offset-7 {
+  margin-left: 58.33333333%;
+}
+.col-xs-offset-6 {
+  margin-left: 50%;
+}
+.col-xs-offset-5 {
+  
+
+margin-left: 41.66666667%;
+}
+.col-xs-offset-4 {
+  margin-left: 33.33333333%;
+}
+.col-xs-offset-3 {
+  margin-left: 25%;
+}
+.col-xs-offset-2 {
+  margin-left: 16.66666667%;
+}
+.col-xs-offset-1 {
+  margin-left:8.33333333%;
+}
+.col-xs-offset-0 {
+  margin-left: 0;
+}
+/*轮播*/
+.carousel-wrap{
+	position:relative;
+}
+.carousel-list{
+	overflow:hidden;
+}
+.carousel-list li{
+	float:left;
+	position:relative;
+}
+/*按钮*/
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+ 
+
+ outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn:hover,
+.btn:focus,
+.btn.focus {
+  color: #333;
+  text-decoration: none;
+}
+.btn:active,
+.btn.active {
+  
+
+background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+.btn.disabled,
+.btn[disabled] {
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  opacity: .65;
+}
+.close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .2;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  
+
+filter: alpha(opacity=50);
+  opacity: .5;
+}
+/*2.0 header
+-------------------------------------*/
+.kk-nav{ 
+	height:80px;
+	line-height:80px;
+	background:url(../images/kakaso/kaka-navbg.png) repeat 0px 0px;
+}
+.kk-nav-list{}
+.kk-nav-list li{ 
+	float:left;
+	width:112px;
+	text-align:center;
+	font-size: 18px;
+}
+.kk-nav-list li a{
+	display:block;
+	font-size: 18px;
+}
+.kk-nav-list li.active a,.kk-nav-list li a:hover{
+	background:url(../images/kakaso/kaka-navbgA.png) repeat 0px 0px;
+}
+.kk-nav-list li img{
+	vertical-align:middle;
+}
+.kk-nav-list li.logo{
+	width:200px;
+	text-align:left;
+}
+.kk-nav-list li.logo a:hover{ background:none}
+
+.index-nav{position:fixed; bottom:0px; width:100%; left:0; z-index:99}
+
+/*3.0 Content pages
+-------------------------------------*/
+/* 3.1 index
+----------------*/
+.index-topLogo{
+	height:81px;
+	background:url(../images/kakaso/index-top-logo.png) no-repeat 0px 0px;
+	margin-bottom: 20px;
+}
+.index .section{ 
+	height:100%;
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:left bottom;
+	z-index:2;
+}
+.index .section .tableCell{vertical-align:top;}
+.index .section1{
+	background-image:url(../images/kakaso/index/index-part1-bg.png);
+}
+.section1 p.animated{
+	display:none;
+}
+.section1 p.fadeInUp{
+	display:block;
+	margin:10px 0;
+}
+.section1 .sun{
+	position:absolute;
+	top:90px;
+	right:0px;
+	width:410px;
+	height:27px;
+	padding-top:115px;
+	background:url(../images/kakaso/index/index-sun.png) no-repeat 50px 0px;
+}
+.section1 .font-g{
+	padding-top:20px;
+}
+.section1 .font-g p{
+	margin:10px 0;
+}
+.part-water{
+	position:absolute;
+	width:100%; 
+	height:445px;
+	bottom:0px;
+	left:0px;
+	z-index:0;
+	overflow:hidden;
+	background:url(../images/kakaso/index/index-part1-water.png) repeat-x 0px 0px;
+	-webkit-animation-name: water;
+          animation-name: water;
+	-webkit-animation-duration:20s;
+		  animation-duration:20s;
+	-webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+	-webkit-animation-timing-function:linear;
+		animation-timing-function:linear;
+}
+.nex-btn{
+	position:absolute;
+	bottom:80px;
+	text-align:center;
+	width:100%;
+	left:0px;
+}
+.nex-btn a:active{
+	opacity:0.7;
+}
+.index .section1,
+.index .section2,
+.index .section3,
+.index .section4,
+.index .section5,
+.index .section6{
+	height:100%;
+	z-index:22;
+	position:relative;
+	background-position:left bottom;
+	background-repeat:no-repeat;
+	background-size:100%;
+}
+.section-cloud{
+	position:absolute;
+-webkit-animation: cloud 40s linear infinite;
+        animation: cloud 40s linear infinite;
+}
+.section-cloud1{ 
+	width:1272px;
+	height:200px;
+	background:url(../images/kakaso/index/index-pdCloud1.png) no-repeat 0 0;
+	top: 175px;
+}
+.section-cloud2{ 
+	width:618px;
+	height:25px;
+	background:url(../images/kakaso/index/index-pdCloud2.png) no-repeat 0 0
+}
+.section-cloud3{ 
+	top: 31%;
+	width:956px;
+	height:48px;
+	background:url(../images/kakaso/index/index-pdCloud3.png) no-repeat 0 0
+}
+.section-cloud4{ 
+	width:1272px;
+	height:200px;
+	background:url(../images/kakaso/index/index-pdCloud1.png) no-repeat 0 0
+}
+.section-cloud5{ 
+	width:1278px;
+	height:67px;
+	background:url(../images/kakaso/index/index-pdCloud5.png) no-repeat 0 0
+}
+.section-cloud6{ 
+	width:1278px;
+	height:67px;
+	background:url(../images/kakaso/index/index-pdCloud5.png) no-repeat 0 0
+}
+.index .section2{
+	background-image:url(../images/kakaso/index/index-part2-bg.png);
+}
+.section2Kaka{
+	width:343px;
+	height:290px;
+	position:relative;
+	background:url(../images/kakaso/index/index-part2-kaka.png) no-repeat 0px 0px;
+	margin-top: 42px;
+}
+.section2Kaka .gas{
+	width:18px;
+	height:35px;
+	background:url(../images/kakaso/index/index-part2-bgas.png) repeat-y 0px 0px;
+	position: absolute;
+	bottom: 57px;
+	right: 72px;
+-webkit-animation: s2Gas 15s linear infinite;
+        animation: s2Gas 15s linear infinite;
+}
+
+.index .section3{
+	background-image:url(../images/kakaso/index/index-part3-bg.png);
+}
+.index .section4{
+	background-image:url(../images/kakaso/index/index-part4-bg.png);
+}
+.section4-boat{
+	width:345px;
+	height:100px;
+	background:url(../images/kakaso/index/index-part4-boat.png) no-repeat;
+-webkit-animation: boat 8s linear infinite;
+		animation: boat 8s linear infinite;
+	position:absolute;
+	right: 229px;
+	bottom: 175px;
+}
+
+.index .section5{
+	background-image:url(../images/kakaso/index/index-part5-bg.png);
+}
+.section5 .font-g{
+	padding-top: 12%;
+}
+.section5 .font-g p{
+	text-align:right; 
+	padding-right:20px
+}
+.index .section6{
+	background-image:url(../images/kakaso/index/index-part6-bg.png);
+}
+/* 3.2 走进kaka
+--------------------------------------*/
+/*
+.near-banner{
+	background:url(../images/kakaso/near/near-banner.png) no-repeat 0px 0px;
+	background-size:100% 100%;
+	height:472px;
+	color:#c79f49;
+	font-family:'宋体';
+}
+.near-banner h4{
+	font-size:4em;
+	font-weight:bolder;
+	color:#6a3906;
+	margin-top:166px;
+}
+.near-banner .h4{
+	font-size:3em;
+	font-weight:bolder;
+	color:#6a3906;
+	margin-bottom:10px;
+}
+**/
+.kklr-linebg{background:url(../images/near-linebg2.png) no-repeat 0px 5px;}
+.kklr{ overflow:hidden;background:url(../images/near-linebg.png) repeat-y 144px 0px;
+	padding:60px 0 0px 0;}
+.kklr>div{float:left;}
+.kk-left{}
+.kk-left ul{}
+.kk-left ul li{ text-align:right;color:#88877a;font-size:14px; padding-right:30px;height: 84px; cursor:pointer;width: 120px;}
+.kk-left ul li.active{font-size:18px; color:#69c21f;background:url(../images/near-linebg3.png) no-repeat right 7px;}
+.kk-left ul li p.lit{font-size:12px}
+.kk-right{ padding:15px 0;  width:800px;margin-left:30px;}
+.kk-right-cont{ min-height:350px;}
+.kk-right-cont>div{display:none;}
+.kk-right-cont>div.active{ display:block !important}
+#search_text{color:#000;}
+
+/* 3.3 kaka代理
+-------------------------------------*/
+.agentForm{
+	overflow:hidden
+}
+.agentForm .left{
+	width:350px;
+	float:left;
+	padding-top:15px;
+}
+.agentForm .left form{
+	
+	width:390px;
+	display:inline-block;
+	margin-bottom:10px;
+}
+.agentForm .left form .text{
+	float: left;
+	height:43px;
+	line-height:43px;
+	width:205px;
+	background:none;
+	border:1px solid #888888;
+	padding:0 5px;
+	font-size: 16px;
+}
+.agentForm .left form .text:focus{
+	outline:none;
+}
+.agentForm .left form .button{
+	float: left;
+	display:inline-block;
+	/*background:url(../images/kakaso/kkdl/kkdl-searchBg.png) no-repeat center;*/
+	cursor:pointer;
+	background-color: #beeb85;
+    border: 0 none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0;
+    width: 102px;
+}
+.agentForm .left form .button:hover{
+	background-color: #95da72;
+}
+.agentForm .left p{ margin:5px 0; color:#717071}
+.agentForm .right{
+	float:right;
+	width: 586px;
+	padding-bottom: 45px;
+	/*text-align:center*/
+}
+.agentForm .right img{
+	width: 830px;
+}
+.agentForm .right .right-down{
+	display:block;
+	width:100px;
+	height:30px;
+	line-height:30px;
+	border:1px solid #ccc;
+	border-radius:3px;
+	text-align:center;
+	color:#000;
+	margin:15px auto;
+}
+
+.agentForm .right .right-down:active{
+	color:#24b842;
+}
+/* 3.3 微商资讯
+-------------------------------------*/
+.wszx{}
+.wszx h4{ margin:15px 0; width:567px;}
+.wszx p{ text-indent:2em; margin:5px 0; line-height:20px; font-size:12px;width:567px;}
+
+
+/* 3.4 产品中心
+---------------------------------------*/
+.product-1{ padding:0 0 10px 0}
+.product-1 p{ color:#000; text-indent:2em; line-height:25px;}
+.product-2{ padding:15px 0 30px 0}
+.product-2 h4{ color:#000; margin: 25px 0 5px 0;}
+.product-2 p{ text-indent:2em; color:#646260; font-size:12px; line-height:27px}
+.product-2 .img{ float:right}
+
+
+/* 3.5 联系我们
+---------------------------------------*/
+.contact{ width:960px; margin:0 auto; padding:15px 0; min-height:600px;}
+.contact .info{ overflow:hidden;}
+.contact .info .left{ float:left; width:742px;}
+.contact .info .left h4{ font-size:18px; color:#1cc900; border-bottom:1px solid #dad8c8; line-height:35px;}
+.contact .info .left ul li{ line-height:35px; color:#717071}
+.contact .info .right{ float:left; margin-left:15px; width:150px; padding-top:20px;}
+.contact .info .right .pic{ width:150px; height:150px; background:#eeeeef}
+
+
+/*4.0 SideBar
+-------------------------------------*/
+/*首页导航圆点*/
+#fullPage-nav span, .fullPage-slidesNav span{ border:none;}
+#fullPage-nav li a span, .fullPage-slidesNav li a span{background:url(../images/kakaso/pagenation-l.png) no-repeat center}
+#fullPage-nav li .active span, .fullPage-slidesNav .active span{background:url(../images/kakaso/pagenation-a.png) no-repeat center}
+#fullPage-nav.right{
+	right:50%;
+	margin-right: -614px;
+}
+
+/*5.0 Footer
+-------------------------------------*/
+.kk-foot{
+	height:50px;
+	padding-top:15px;
+}
+.kk-foot p{
+	text-align:center;
+	font-size:12px;
+	color:#717071;
+}
+
+/* animate.css
+--------------------------------------*/
+.animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+-webkit-animation-duration:1.5s;
+		  animation-duration:1.5s;
+}
+@-webkit-keyframes Lr {
+  0% {
+	  margin-left:0px;
+  }
+	50% {
+	  margin-left:50px;
+  }
+  100% {
+	  margin-left:0px;
+  }
+}
+@keyframes Lr {
+  0% {
+	  margin-left:0px;
+  }
+	50% {
+	  margin-left:50px;
+  }
+  100% {
+	  margin-left:0px;
+  }
+}
+.Lr{
+-webkit-animation: Lr;
+        animation: Lr;
+-webkit-animation-duration:5s;
+		animation-duration:5s;
+-webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+}
+@-webkit-keyframes water {
+  0% {
+	  background-position:-200px 0;
+  }
+  100% {
+	  background-position:0 0;
+  }
+}
+@keyframes water {
+  0% {
+	  background-position:-200px 0;
+  }
+  100% {
+	  background-position:0px 0;
+  }
+}
+
+@-webkit-keyframes s2Gas {
+  0% {
+	  background-position:0px -200px;
+  }
+  100% {
+	  background-position:0 0;
+  }
+}
+@keyframes s2Gas {
+  0% {
+	  background-position:0px -200px;
+  }
+  100% {
+	  background-position:0px 0;
+  }
+}
+@-webkit-keyframes boat {
+  0% {
+	  background-position:0px 0px;
+  }
+  50% {
+	  background-position:0 10px;
+  }
+  100% {
+	  background-position:0 0;
+  }
+}
+@keyframes boat {
+  0% {
+	  background-position:0px 0px;
+  }
+  50% {
+	  background-position:0px 10px;
+  }
+  100% {
+	  background-position:0px 0;
+  }
+}
+@-webkit-keyframes cloud {
+  0% {
+	  left:0px;
+  }
+  50% {
+	  left:100%;
+  }
+  50.1% {
+	  left:-100%;
+  }
+  100% {
+	  left:0px;
+  }
+}
+@keyframes cloud {
+  0% {
+	  left:0px;
+  }
+  50% {
+	  left:100%;
+  }
+  50.1% {
+	  left:-100%;
+  }
+  100% {
+	  left:0px;
+  }
+}
+.agentForm .check_img{
+
+}
+.agentForm .check_img img{
+	width: 266px;
+	margin-left: 45px;
+}
+.agentForm .left .check_text_box{
+	font-size: 16px;
+	line-height: 26px;
+	margin-top: 25px;
+}

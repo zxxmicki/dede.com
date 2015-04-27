@@ -1,0 +1,101 @@
+<extend name="Public/base" />
+
+<block name="body">
+	<!-- 标题栏 -->
+	<div class="main-title">
+		<h2>{$meta_title}</h2>
+	</div>
+
+	<div class="cf">
+		<div class="fl">
+            <a class="btn" href="{:U('Product/add')}">添加新产品</a>
+            <button class="btn ajax-post confirm" url="{:U('Product/changeStatus',array('method'=>'resumeUser'))}" target-form="ids">上 架</button>
+            <button class="btn ajax-post confirm" url="{:U('Product/changeStatus',array('method'=>'forbidUser'))}" target-form="ids">下 架</button>
+            <button class="btn ajax-post confirm" url="{:U('Product/changeStatus',array('method'=>'deleteUser'))}" target-form="ids">删 除</button>
+        </div>
+
+
+    </div>
+    <!-- 数据列表 -->
+    <div class="data-table table-striped">
+	<table class="">
+    <thead>
+        <tr>
+		<th class="row-selected row-selected"><input class="check-all" type="checkbox"/></th>
+		<th class="">ID</th>
+		<th class="">名称</th>
+		<th class="">图片</th>
+		<th class="">价格1</th>
+            <th class="">价格2</th>
+            <th class="">价格3</th>
+            <th class="">价格4</th>
+            <th class="">价格5</th>
+            <th class="">盒/箱</th>
+		<th class="">状态</th>
+		<th class="">操作</th>
+		</tr>
+    </thead>
+    <tbody>
+		<notempty name="_list">
+		<volist name="_list" id="vo">
+		<tr>
+            <td><input class="ids" type="checkbox" name="id[]" value="{$vo.id}" /></td>
+			<td>{$vo.id} </td>
+			<td>{$vo.name}</td>
+			<td  class="upload-img-box" ><div class="upload-pre-item"  style="height: 30px"><img src="{$vo.img}" /></div></td>
+			<td>{$vo.price_1}</td>
+            <td>{$vo.price_2}</td>
+            <td>{$vo.price_3}</td>
+            <td>{$vo.price_4}</td>
+            <td>{$vo.price_5}</td>
+			<td>{$vo.box}</td>
+            <td><eq name="vo.status" value="1">正常<else/>已下架</eq></td>
+			<td><a href="{:U('Product/edit?&id='.$vo['id'])}">查看</a>
+                <eq name="vo.status" value="1">
+				<a href="{:U('Product/changeStatus?method=forbidUser&id='.$vo['id'])}" class="confirm ajax-get">下架</a>
+				<else/>
+				<a href="{:U('Product/changeStatus?method=resumeUser&id='.$vo['id'])}" class="confirm ajax-get">上架</a>
+				</eq>
+				<a href="{:U('Product/changeStatus?method=deleteUser&id='.$vo['id'])}" class="confirm ajax-get">删除</a>
+                </td>
+		</tr>
+		</volist>
+		<else/>
+		<td colspan="9" class="text-center"> aOh! 暂时还没有内容! </td>
+		</notempty>
+	</tbody>
+    </table>
+	</div>
+    <div class="page">
+        {$_page}
+    </div>
+</block>
+
+<block name="script">
+	<script src="__STATIC__/thinkbox/jquery.thinkbox.js"></script>
+
+	<script type="text/javascript">
+	//搜索功能
+	$("#search").click(function(){
+		var url = $(this).attr('url');
+        var query  = $('.search-form').find('input').serialize();
+        query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g,'');
+        query = query.replace(/^&/g,'');
+        if( url.indexOf('?')>0 ){
+            url += '&' + query;
+        }else{
+            url += '?' + query;
+        }
+		window.location.href = url;
+	});
+	//回车搜索
+	$(".search-input").keyup(function(e){
+		if(e.keyCode === 13){
+			$("#search").click();
+			return false;
+		}
+	});
+    //导航高亮
+    highlight_subnav('{:U('User/index')}');
+	</script>
+</block>

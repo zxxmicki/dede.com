@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks
+  RewriteEngine On
+	RewriteRule ^login.html$ index.php/admin/public/login.html [QSA,PT,L]
+	RewriteRule ^xxagent.html$ index.php/admin/public/xxagent.html [QSA,PT,L]
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+</IfModule>

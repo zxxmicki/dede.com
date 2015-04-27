@@ -1,0 +1,8 @@
+[ 2015-04-27T17:25:16+08:00 ] 127.0.0.1 /index.php?s=/admin/user/changestatus/method/addm/id/23.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE ( id=23 )' at line 1
+ [ SQL语句 ] : UPDATE `onethink_ucenter_member` SET `money`=money+ WHERE ( id=23 )
+
+[ 2015-04-27T17:37:13+08:00 ] 127.0.0.1 /index.php?s=/admin/user/changestatus/method/addm/id/16.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE ( id=16 )' at line 1
+ [ SQL语句 ] : UPDATE `onethink_ucenter_member` SET `money`=money+ WHERE ( id=16 )
+
