@@ -141,7 +141,8 @@
                 <a href="<?php echo U('Product/buy');?>" class="confirm ajax-post" target-form="<?php echo ($vo['id']); ?>">购买</a><?php endif; ?>
                 <?php if(($level) == "1"): ?><a href="<?php echo U('Product/ship?&id='.$vo['id']);?>">发货申请</a>
                     <?php else: ?>
-                    <a href="<?php echo U('Product/send?&id='.$vo['id']);?>">代理配货</a><?php endif; ?>
+                    <?php if(($level) == "6"): else: ?>
+                    <a href="<?php echo U('Product/send?&id='.$vo['id']);?>">代理配货</a><?php endif; endif; ?>
             </td>
 		</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 		<?php else: ?>

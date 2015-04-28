@@ -193,6 +193,11 @@ class ProductController extends AdminController {
             case 'deleteuser':
                 $this->delete('Product', $map );
                 break;
+            case 'ship_c':
+                $data=array('status'=>1,'update_time'=>time());
+                M('Ship')->where('id='.$id)->save($data);
+                $this->success('发货成功');
+                break;
             default:
                 $this->error('参数非法');
         }
@@ -216,6 +221,10 @@ class ProductController extends AdminController {
             M('ProductToUser')->add(array('product_id'=>$id,'user_id'=>UID,'qty'=>$num));
         }
         M('UcenterMember')->where('id='.UID)->setDec('money',$money_totle);
+        $data=array('u_id'=>UID,'o_id'=>'','type'=>'money','num'=>$money_totle,'comment'=>'购买产品id:'.$id,'time'=>time());
+        M('Log')->add($data);
+        $data=array('u_id'=>1,'o_id'=>UID,'type'=>'send','num'=>$num,'comment'=>'公司配货产品id:'.$id,'time'=>time());
+        M('Log')->add($data);
         $this->success('购买成功,金额:'.$money_totle);
 
     }
@@ -226,7 +235,7 @@ class ProductController extends AdminController {
         $this->box =  M('Product')->where('id='.$id)->getField('box');
         $own_n = M('ProductToUser')->where('product_id='.$id.' and user_id='.UID)->getField('qty');
         if(IS_POST){
-            $uid = I('uid');
+            $uid = I('uid');if($uid=='')$this->error('参数错误');
             $box = I('box');
             $pie = I('pie');
             $num = $box*$this->box+$pie;
@@ -240,6 +249,8 @@ class ProductController extends AdminController {
                 M('ProductToUser')->add(array('product_id'=>$id,'user_id'=>$uid,'qty'=>$num));
             }
             M('ProductToUser')->where('product_id='.$id.' and user_id='.UID)->setDec('qty',$num);
+            $data=array('u_id'=>UID,'o_id'=>$uid,'type'=>'send','num'=>$num,'comment'=>'代理配货产品id:'.$id,'time'=>time());
+            M('Log')->add($data);
             $this->success('配货成功');
         } else {
             $this->id=$id;
@@ -262,21 +273,23 @@ class ProductController extends AdminController {
         $this->box =  M('Product')->where('id='.$id)->getField('box');
         $own_n = M('ProductToUser')->where('product_id='.$id.' and user_id='.UID)->getField('qty');
         if(IS_POST){
-            $uid = I('uid');
             $box = I('box');
             $pie = I('pie');
+            $tel = I('tel');
+            $name = I('name');
+            $address = I('address');
+            $comment = I('comment');
             $num = $box*$this->box+$pie;
             if($num<=0)$this->error('请输入要配送的数量');
             if(!is_int($num))$this->error('请输入正确的配送数量');
-            if($own_n < $num)$this->error('您的存货不足,请先购买');
-            $p_u=M('ProductToUser')->where('product_id='.$id.' and user_id='.$uid)->getField('id');
-            if($p_u){
-                M('ProductToUser')->where('id='.$p_u)->setInc('qty',$num);
-            }else{
-                M('ProductToUser')->add(array('product_id'=>$id,'user_id'=>$uid,'qty'=>$num));
-            }
+            if($own_n < $num)$this->error('您的存货不足');
+            if($tel==''||$name==''||$address=='')$this->error('收货人信息不完整');
+            $data = array('product_id'=>$id,'product_num'=>$num,'name'=>$name,'tel'=>$tel,'address'=>$address,'comment'=>$comment,'user_id'=>UID,'status'=>0,'time'=>time());
+            M('Ship')->add($data);
             M('ProductToUser')->where('product_id='.$id.' and user_id='.UID)->setDec('qty',$num);
-            $this->success('配货成功');
+            $data=array('u_id'=>UID,'o_id'=>'','type'=>'send','num'=>$num,'comment'=>'发货申请产品id:'.$id.'客户:'.$name,'time'=>time());
+            M('Log')->add($data);
+            $this->success('发货申请成功');
         } else {
             $this->id=$id;
             $this->box_n=floor($own_n/$this->box);
@@ -371,5 +384,25 @@ class ProductController extends AdminController {
             $this->meta_title = '编辑产品';
             $this->display();
         }
+    }
+    public function log(){
+        if(UID != 1)$map['o_id|u_id']  =  UID;
+        $map['type']  =  'send';
+        $list   = $this->lists('Log', $map, 'time desc');
+
+        $this->assign('_list', $list);
+        $this->meta_title = '产品记录';
+
+        $this->display();
+    }
+    public function slog(){
+        if(UID != 1)$map['user_id']  =  UID;
+
+        $list   = $this->lists('Ship', $map, 'time desc');
+        $this->uid=UID;
+        $this->assign('_list', $list);
+        $this->meta_title = '发货管理';
+
+        $this->display();
     }
 }

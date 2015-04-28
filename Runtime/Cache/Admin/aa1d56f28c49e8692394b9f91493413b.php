@@ -85,47 +85,61 @@
             
 
             
-
+    <!-- 标题栏 -->
     <div class="main-title">
-        <h2><?php echo ($meta_title); ?></h2>
+        <h2>发货管理</h2>
     </div>
-    <form action="<?php echo U();?>" method="post" class="form-horizontal">
-        <div class="form-item">
-            <label class="item-label">产品名称:</label><?php echo ($name); ?>
-        </div>
-        <div class="form-item">
-            <label class="item-label">剩余数量:</label><?php echo ($box_n); ?>箱<?php echo ($pie_n); ?>盒
-        </div>
-        <div class="form-item">
-            <label class="item-label">收件人姓名</label>
-            <input type="text" size="10" name="name" value="">
-        </div>
-        <div class="form-item">
-            <label class="item-label">联系手机(请仔细填写)</label>
-            <input type="text" size="20" name="tel" value="">
-        </div>
-        <div class="form-item">
-            <label class="item-label">收货地址(请详细填写)</label>
-            <input type="text" size="60" name="address" value="">
-        </div>
-        <div class="form-item">
-            <label class="item-label">备注(选填)</label>
-            <input type="text" size="60" name="comment" value="">
-        </div>
-        <div class="form-item">
-            <label class="item-label">数量</label>
-            <div class="controls">
-                <input type="text" size="5" name="box" value="">箱
-                <input type="text" size="5" name="pie" value="">盒
-            </div>
-        </div>
 
-        <div class="form-item">
-            <input type="hidden" name="id" value="<?php echo ($id); ?>">
-            <button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
-            <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
-        </div>
-    </form>
+    <!-- 数据列表 -->
+    <div class="data-table table-striped">
+        <table class="">
+            <thead>
+            <tr>
+                <th class="">id</th>
+                <th class="">申请人</th>
+                <th class="">产品</th>
+                <th class="">数量</th>
+                <th class="">收货人姓名</th>
+                <th class="">联系电话</th>
+                <th class="">收货地址</th>
+                <th class="">备注</th>
+                <th class="">状态</th>
+                <th class="">创建时间</th>
+                <th class="">更新时间</th>
+                <th class=""></th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <?php if(!empty($_list)): if(is_array($_list)): $i = 0; $__LIST__ = $_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                        <td><?php echo ($vo["id"]); ?> </td>
+                        <td><?php echo ($vo["user_id"]); ?> </td>
+                        <td><?php echo ($vo["product_id"]); ?> </td>
+                        <td><?php echo ($vo["product_num"]); ?></td>
+                        <td><?php echo ($vo["name"]); ?></td>
+                        <td><?php echo ($vo["tel"]); ?></td>
+                        <td><?php echo ($vo["address"]); ?></td>
+                        <td><?php echo ($vo["comment"]); ?></td>
+                        <?php if(($vo["status"]) == "1"): ?><td>已发货</td>
+                            <?php else: ?>
+                            <td>未发货</td><?php endif; ?>
+                        <td><?php echo (time_format($vo["time"])); ?></td>
+                        <?php if(($vo["update_time"]) == ""): ?><td></td>
+                            <?php else: ?>
+                        <td><?php echo (time_format($vo["update_time"])); ?></td><?php endif; ?>
+                        <td>
+                        <?php if(($uid) == "1"): if(($vo["status"]) == "0"): ?><a href="<?php echo U('Product/changeStatus?method=ship_c&id='.$vo['id']);?>" class="confirm ajax-get">发货</a><?php endif; endif; ?>
+                        </td>
+
+                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                <?php else: ?>
+                <td colspan="9" class="text-center"> aOh! 暂时还没有内容! </td><?php endif; ?>
+            </tbody>
+        </table>
+    </div>
+    <div class="page">
+        <?php echo ($_page); ?>
+    </div>
 
         </div>
         <div class="cont-ft">
@@ -220,9 +234,31 @@
         }();
     </script>
     
+    <script src="/Public/static/thinkbox/jquery.thinkbox.js"></script>
+
     <script type="text/javascript">
+        //搜索功能
+        $("#search").click(function(){
+            var url = $(this).attr('url');
+            var query  = $('.search-form').find('input').serialize();
+            query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g,'');
+            query = query.replace(/^&/g,'');
+            if( url.indexOf('?')>0 ){
+                url += '&' + query;
+            }else{
+                url += '?' + query;
+            }
+            window.location.href = url;
+        });
+        //回车搜索
+        $(".search-input").keyup(function(e){
+            if(e.keyCode === 13){
+                $("#search").click();
+                return false;
+            }
+        });
         //导航高亮
-        highlight_subnav('<?php echo U('Product/index');?>');
+        highlight_subnav('<?php echo U('Product/slog');?>');
     </script>
 
 </body>

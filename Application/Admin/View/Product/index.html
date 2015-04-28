@@ -64,7 +64,10 @@
                 <eq name="level" value="1">
                     <a href="{:U('Product/ship?&id='.$vo['id'])}">发货申请</a>
                     <else/>
+                    <eq name="level" value="6">
+                        <else/>
                     <a href="{:U('Product/send?&id='.$vo['id'])}">代理配货</a>
+                    </eq>
                 </eq>
             </td>
 		</tr>

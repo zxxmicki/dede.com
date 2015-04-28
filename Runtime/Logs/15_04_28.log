@@ -1,832 +1,114 @@
-[ 2015-04-28T00:14:41+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT * FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-
-[ 2015-04-28T00:14:47+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT * FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-
-[ 2015-04-28T00:14:51+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT * FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-
-[ 2015-04-28T00:15:08+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT * FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-
-[ 2015-04-28T00:15:48+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT * FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-
-[ 2015-04-28T00:15:50+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT * FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-
-[ 2015-04-28T00:15:53+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT * FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-
-[ 2015-04-28T00:15:56+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT * FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-
-[ 2015-04-28T00:15:59+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT * FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-
-[ 2015-04-28T00:16:19+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT * FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-
-[ 2015-04-28T00:16:21+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT * FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-
-[ 2015-04-28T00:16:24+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT * FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-
-[ 2015-04-28T00:17:28+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:17:30+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:17:41+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:17:44+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:17:52+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:17:59+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:18:02+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:18:39+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:19:16+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:19:19+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:19:34+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:19:51+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:19:54+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:20:12+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:20:15+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:20:20+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:20:51+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:20:59+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:21:02+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:21:33+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:21:42+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:21:44+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:21:47+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:22:06+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:22:10+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:22:13+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:22:49+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:23:07+08:00 ] 127.0.0.1 /index.php?s=/admin/product/send.html
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `name` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `box` FROM `onethink_product` WHERE ( id= ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'and user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id= and user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:30:32+08:00 ] 127.0.0.1 /index.php?s=/admin/product/index.html
-ERR: 1064:Erreur de syntaxe près de 'user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id=4 user_id=16 ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id=2 user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:30:33+08:00 ] 127.0.0.1 /index.php?s=/admin/product/index.html
-ERR: 1064:Erreur de syntaxe près de 'user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id=4 user_id=16 ) LIMIT 1  
-ERR: 1064:Erreur de syntaxe près de 'user_id=16 ) LIMIT 1' à la ligne 1
- [ SQL语句 ] : SELECT `qty` FROM `onethink_product_to_user` WHERE ( product_id=2 user_id=16 ) LIMIT 1  
-
-[ 2015-04-28T00:40:21+08:00 ] 127.0.0.1 /index.php?s=/admin/public/logout.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-
-[ 2015-04-28T00:53:37+08:00 ] 127.0.0.1 /index.php?s=/admin/public/logout.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-
-[ 2015-04-28T00:55:06+08:00 ] 127.0.0.1 /index.php?s=/admin/Action/actionlog
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-
-[ 2015-04-28T00:55:13+08:00 ] 127.0.0.1 /index.php?s=/admin/action/actionlog/p/2.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-
-[ 2015-04-28T00:55:15+08:00 ] 127.0.0.1 /index.php?s=/admin/action/actionlog/p/3.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-
-[ 2015-04-28T00:55:17+08:00 ] 127.0.0.1 /index.php?s=/admin/action/actionlog/p/4.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-
-[ 2015-04-28T00:55:19+08:00 ] 127.0.0.1 /index.php?s=/admin/action/actionlog/p/5.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-
-[ 2015-04-28T00:55:20+08:00 ] 127.0.0.1 /index.php?s=/admin/action/edit/id/17.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-
-[ 2015-04-28T00:55:29+08:00 ] 127.0.0.1 /index.php?s=/admin/action/edit/id/15.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-
-[ 2015-04-28T00:55:38+08:00 ] 127.0.0.1 /index.php?s=/admin/action/edit/id/9.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-
-[ 2015-04-28T00:55:42+08:00 ] 127.0.0.1 /index.php?s=/admin/action/actionlog/p/6.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-
-[ 2015-04-28T00:57:52+08:00 ] 127.0.0.1 /index.php?s=/admin/public/logout.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-
-[ 2015-04-28T00:58:11+08:00 ] 127.0.0.1 /index.php?s=/admin/action/actionlog.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-
-[ 2015-04-28T00:58:14+08:00 ] 127.0.0.1 /index.php?s=/admin/action/edit/id/59.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-
-[ 2015-04-28T00:58:18+08:00 ] 127.0.0.1 /index.php?s=/admin/action/actionlog/p/2.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-
-[ 2015-04-28T00:58:19+08:00 ] 127.0.0.1 /index.php?s=/admin/action/actionlog/p/1.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-
-[ 2015-04-28T00:58:21+08:00 ] 127.0.0.1 /index.php?s=/admin/action/actionlog.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-
-[ 2015-04-28T00:58:38+08:00 ] 127.0.0.1 /index.php?s=/admin/action/actionlog.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-
-[ 2015-04-28T00:58:47+08:00 ] 127.0.0.1 /index.php?s=/admin/action/edit/id/59.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-
-[ 2015-04-28T00:58:55+08:00 ] 127.0.0.1 /index.php?s=/admin/action/edit/id/57.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-
-[ 2015-04-28T00:59:05+08:00 ] 127.0.0.1 /index.php?s=/admin/action/edit/id/56.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-
-[ 2015-04-28T00:59:16+08:00 ] 127.0.0.1 /index.php?s=/admin/action/actionlog.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-
-[ 2015-04-28T00:59:22+08:00 ] 127.0.0.1 /index.php?s=/admin/action/actionlog.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-
-[ 2015-04-28T00:59:25+08:00 ] 127.0.0.1 /index.php?s=/admin/action/actionlog.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-
-[ 2015-04-28T00:59:28+08:00 ] 127.0.0.1 /index.php?s=/admin/action/actionlog.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-
-[ 2015-04-28T01:03:18+08:00 ] 127.0.0.1 /index.php?s=/admin/action/actionlog.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-
-[ 2015-04-28T01:03:23+08:00 ] 127.0.0.1 /index.php?s=/admin/action/edit/id/59.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-
-[ 2015-04-28T01:03:31+08:00 ] 127.0.0.1 /index.php?s=/admin/action/actionlog/p/3.html
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SHOW COLUMNS FROM `onethink_member`
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '1' ) LIMIT 1  
-ERR: 1146:La table 'xxdl.onethink_member' n'existe pas
- [ SQL语句 ] : SELECT `nickname` FROM `onethink_member` WHERE ( `id` = '2' ) LIMIT 1  
+[ 2015-04-28T17:06:02+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:06:09+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:07:00+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:07:03+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:07:08+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:07:44+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:07:46+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:08:35+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:08:54+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:09:54+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:10:16+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:10:57+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:11:03+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:11:04+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:11:04+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:11:06+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:11:06+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:11:07+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:11:07+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:11:08+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:11:09+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:11:10+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:11:26+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:11:47+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:11:51+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:11:55+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship_c/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:11:59+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship_c/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:12:00+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship_c/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:13:27+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship_c/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:15:00+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship_c/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:15:02+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship_c/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:15:29+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship_c/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:15:30+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship_c/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:15:35+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship_c/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:15:38+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship_c/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:15:40+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship_c/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:15:42+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/ship_c/id/6.html
+ERR: 无法加载控制器:Products
+
+[ 2015-04-28T17:15:56+08:00 ] 127.0.0.1 /index.php?s=/admin/products/changestatus/method/
+ERR: 无法加载控制器:Products
 

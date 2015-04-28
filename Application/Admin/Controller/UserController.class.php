@@ -205,11 +205,16 @@ class UserController extends AdminController {
                 break;
             case 'addm':
                 if($level!=5)$this->error('非董事不能加款');
-                M('UcenterMember')->where('id='.$id)->setInc('money',I('money'));$this->success('加款成功!');
+                M('UcenterMember')->where('id='.$id)->setInc('money',I('money'));
+                $data=array('u_id'=>UID,'o_id'=>$id,'type'=>'money','num'=>I('money'),'comment'=>'充值','time'=>time());
+                M('Log')->add($data);$this->success('加款成功!');
                 break;
             case 'subm':
                 if($level!=5)$this->error('非董事不能加款');
-                M('UcenterMember')->where('id='.$id)->setDec('money',I('money'));$this->success('减款成功!');
+                M('UcenterMember')->where('id='.$id)->setDec('money',I('money'));
+                $data=array('u_id'=>UID,'o_id'=>$id,'type'=>'money','num'=>I('money'),'comment'=>'管理员扣款','time'=>time());
+                M('Log')->add($data);
+                $this->success('减款成功!');
                 break;
             default:
                 $this->error('参数非法');
@@ -313,5 +318,16 @@ class UserController extends AdminController {
             $this->meta_title = '查看资料';
             $this->display();
         }
+    }
+
+    public function log(){
+        if(UID != 1)$map['o_id|u_id']  =  UID;
+        $map['type']  =  'money';
+        $list   = $this->lists('Log', $map, 'time desc');
+
+        $this->assign('_list', $list);
+        $this->meta_title = '资金记录';
+
+        $this->display();
     }
 }
